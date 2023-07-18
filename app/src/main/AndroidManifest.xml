@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.snow.testbinder">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="cn.snow.interviewapp.permission.PROVIDER" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TestBinder">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask">
+            <!--https://video.weibo.com/show?fid=1034:4898726267781125-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="test.activity.action_1" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:mimeType="video/*"
+                    android:scheme="https" />
+
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
